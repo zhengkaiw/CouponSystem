@@ -1,4 +1,4 @@
-package com.test.passbook.merchants;
+package com.test.passbook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

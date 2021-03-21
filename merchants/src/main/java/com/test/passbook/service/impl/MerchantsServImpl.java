@@ -8,11 +8,17 @@ import com.test.passbook.vo.CreateMerchantsRequest;
 import com.test.passbook.vo.CreateMerchantsResponse;
 import com.test.passbook.vo.PassTemplate;
 import com.test.passbook.vo.Response;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import javax.transaction.Transactional;
 
 /**
  * <h1>商户服务接口实现</h1>
  */
+@Slf4j
+@Service
 public class MerchantsServImpl implements IMerchantsServ {
 
     /** Merchants 数据库接口 */
@@ -20,6 +26,7 @@ public class MerchantsServImpl implements IMerchantsServ {
     private MerchantsDao merchantsDao;
 
     @Override
+    @Transactional
     public Response createMerchants(CreateMerchantsRequest request) {
         Response response = new Response();
         CreateMerchantsResponse merchantsResponse = new CreateMerchantsResponse();

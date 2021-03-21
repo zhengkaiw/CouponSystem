@@ -1,7 +1,6 @@
-package com.test.passbook.merchants.service;
+package com.test.passbook.service;
 
 import com.alibaba.fastjson.JSON;
-import com.test.passbook.service.IMerchantsServ;
 import com.test.passbook.vo.CreateMerchantsRequest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
